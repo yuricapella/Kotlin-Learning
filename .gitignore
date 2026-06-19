@@ -1,13 +1,22 @@
 # IDE
 .idea/
-.vscode/
+.vscode/*
+!.vscode/tasks.json
 *.iml
 *.iws
 
 # Build
 .gradle/
 build/
+**/build/
 target/
+out/
+
+# Compiled files
+*.class
+*.jar
+*.war
+*.ear
 
 # macOS
 .DS_Store
@@ -15,3 +24,6 @@ target/
 # Environment
 .env
 .env.local
+
+# Logs
+*.log
