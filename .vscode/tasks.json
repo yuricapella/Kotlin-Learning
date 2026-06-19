@@ -1,0 +1,42 @@
+// ============================================================
+// ATALHO PARA RODAR ESTA TASK NO VS CODE
+//
+// Atalho padrão no macOS:
+// Cmd + Shift + B
+//
+// Atalho configurado manualmente no VSCode:
+// F5
+//
+// Esse atalho executa a "Build Task" padrão configurada aqui
+// no tasks.json.
+//
+// Para usar F5 no lugar de Cmd + Shift + B:
+//
+// 1. Abrir o Command Palette:
+//    Cmd + Shift + P
+//
+// 2. Procurar por:
+//    Preferences: Open Keyboard Shortcuts
+//
+// 3. Na busca dos atalhos, procurar por:
+//    Run Build Task
+//
+//4. Colocar a tecla desejada
+{
+  "version": "2.0.0",
+  "tasks": [
+      {
+          "label": "Run Kotlin File",
+          "type": "shell",
+          "command": "cd ${fileDirname} && kotlinc ${fileBasename} -include-runtime -d out.jar && java -jar out.jar && rm out.jar",
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          "presentation": {
+              "reveal": "always",
+              "panel": "dedicated"
+          }
+      }
+  ]
+}
